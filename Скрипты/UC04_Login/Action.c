@@ -7,11 +7,11 @@ Action()
 
 	open_site();
 
-	lr_think_time(16);
+	lr_think_time(5);
 
 	login();
 
-	lr_think_time(10);
+	lr_think_time(5);
 
 	log_out();
 	

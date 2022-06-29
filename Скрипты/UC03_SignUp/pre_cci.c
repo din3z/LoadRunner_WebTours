@@ -2647,6 +2647,26 @@ login(){
 	return 0;
 }
 
+click_flights() {
+	lr_start_transaction("click_flights");
+
+	web_reg_find("Text=<b>Find Flight</font></b>", "LAST");
+
+	web_url("Search Flights Button",
+		"URL=http://localhost:1080/cgi-bin/welcome.pl?page=search",
+		"TargetFrame=body",
+		"Resource=0",
+		"RecContentType=text/html",
+		"Referer=http://localhost:1080/cgi-bin/nav.pl?page=menu&in=home",
+		"Snapshot=t36.inf",
+		"Mode=HTML",
+		"LAST");
+
+	lr_end_transaction("click_flights", 2);
+	return 0;
+	
+}
+
 log_out(){
 	lr_start_transaction("log_out");
 	web_reg_find("Text=Welcome to the Web Tours site.","LAST");
@@ -2692,7 +2712,7 @@ Action()
 	
 	open_site();
 	
-	lr_think_time(17);
+	lr_think_time(5);
 
 	lr_start_transaction("click_signUp");
 	
@@ -2711,7 +2731,7 @@ Action()
 
 	lr_end_transaction("click_signUp",2);
 
-	lr_think_time(36);
+	lr_think_time(5);
 
 	lr_start_transaction("customerProfile");
 	
@@ -2741,7 +2761,7 @@ Action()
 
 	lr_end_transaction("customerProfile",2);
 
-	lr_think_time(14);
+	lr_think_time(5);
 
 	lr_start_transaction("continue");
 	
@@ -2760,9 +2780,18 @@ Action()
 
 	lr_end_transaction("continue",2);
 
-	lr_think_time(12);
+	lr_think_time(5);
+	
+	if (atoi(lr_eval_string("{randForPage}"))==1){
+	
+		click_flights();
+	}
 
-	log_out();
+	if (atoi(lr_eval_string("{randForExit}"))==1){
+		log_out();
+	}
+	
+	
 	
 	lr_end_transaction("UC03_SignUp",2);
 	

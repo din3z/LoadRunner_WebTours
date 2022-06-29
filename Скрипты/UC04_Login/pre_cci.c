@@ -2685,18 +2685,22 @@ vuser_init()
 Action()
 {
 
+	lr_start_transaction("UC04_Login");
  
 	correlate_userSession();
 
 	open_site();
 
-	lr_think_time(16);
+	lr_think_time(5);
 
 	login();
 
-	lr_think_time(10);
+	lr_think_time(5);
 
 	log_out();
+	
+	lr_end_transaction("UC04_Login",2);
+
 
 	return 0;
 }

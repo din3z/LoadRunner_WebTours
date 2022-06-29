@@ -5,7 +5,7 @@ Action()
 	
 	open_site();
 	
-	lr_think_time(17);
+	lr_think_time(5);
 
 	lr_start_transaction("click_signUp");
 	
@@ -24,7 +24,7 @@ Action()
 
 	lr_end_transaction("click_signUp",LR_AUTO);
 
-	lr_think_time(36);
+	lr_think_time(5);
 
 	lr_start_transaction("customerProfile");
 	
@@ -54,7 +54,7 @@ Action()
 
 	lr_end_transaction("customerProfile",LR_AUTO);
 
-	lr_think_time(14);
+	lr_think_time(5);
 
 	lr_start_transaction("continue");
 	
@@ -73,9 +73,17 @@ Action()
 
 	lr_end_transaction("continue",LR_AUTO);
 
-	lr_think_time(12);
+	lr_think_time(5);
+	
+	if (atoi(lr_eval_string("{randForPage}"))==1){
+		click_flights();
+	}
 
-	log_out();
+	if (atoi(lr_eval_string("{randForExit}"))==1){
+		log_out();
+	}
+	
+	
 	
 	lr_end_transaction("UC03_SignUp",LR_AUTO);
 	

@@ -16,6 +16,22 @@
     <FileEntry Name="combined_UC05_Itinerary.c" Filter="2" />
     <FileEntry Name="pre_cci.c" Filter="2" />
     <FileEntry Name="147135069440.idx" Filter="1" />
+    <FileEntry Name="14713506944_3JN.173.idx" Filter="1" />
+    <FileEntry Name="14713506944_7Ip.641.idx" Filter="1" />
+    <FileEntry Name="14713506944_Aoa.837.idx" Filter="1" />
+    <FileEntry Name="14713506944_dIY.25.idx" Filter="1" />
+    <FileEntry Name="14713506944_dWN.213.idx" Filter="1" />
+    <FileEntry Name="14713506944_eTi.895.idx" Filter="1" />
+    <FileEntry Name="14713506944_Fht.493.idx" Filter="1" />
+    <FileEntry Name="14713506944_J1D.275.idx" Filter="1" />
+    <FileEntry Name="14713506944_Ji5.915.idx" Filter="1" />
+    <FileEntry Name="14713506944_Jn6.485.idx" Filter="1" />
+    <FileEntry Name="14713506944_MDp.679.idx" Filter="1" />
+    <FileEntry Name="14713506944_OJG.573.idx" Filter="1" />
+    <FileEntry Name="14713506944_Rn2.503.idx" Filter="1" />
+    <FileEntry Name="14713506944_sFT.839.idx" Filter="1" />
+    <FileEntry Name="14713506944_Ujo.289.idx" Filter="1" />
+    <FileEntry Name="14713506944_WtC.707.idx" Filter="1" />
     <FileEntry Name="Bookmarks.xml" Filter="1" />
     <FileEntry Name="Breakpoints.xml" Filter="1" />
     <FileEntry Name="CompilerLogMetadata.xml" Filter="1" />
@@ -23,6 +39,7 @@
     <FileEntry Name="logfile.log" Filter="1" />
     <FileEntry Name="lrw_custom_body.h" Filter="1" />
     <FileEntry Name="mdrv.log" Filter="1" />
+    <FileEntry Name="mdrvD6k.935.log" Filter="1" />
     <FileEntry Name="mdrv_cmd.txt" Filter="1" />
     <FileEntry Name="options.txt" Filter="1" />
     <FileEntry Name="output.bak" Filter="1" />
@@ -33,6 +50,7 @@
     <FileEntry Name="ThumbnailsCache.tmp" Filter="1" />
     <FileEntry Name="UC05_Itinerary.c.pickle" Filter="1" />
     <FileEntry Name="UC05_Itinerary.ci" Filter="1" />
+    <FileEntry Name="UC05_Itinerary.prm.bak" Filter="1" />
     <FileEntry Name="UserTasks.xml" Filter="1" />
     <FileEntry Name="data\" Filter="1" />
     <FileEntry Name="result1\" Filter="1" />

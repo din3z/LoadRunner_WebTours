@@ -7,27 +7,15 @@ Action()
 
 	open_site();
 
-	lr_think_time(20);
+	lr_think_time(5);
 
 	login();
 
-	lr_start_transaction("goto_itinerary");
-	web_reg_find("Text=Since user has already logged on",
-		LAST);
+	goto_itinerary();
 
-	web_url("Itinerary Button", 
-		"URL=http://localhost:1080/cgi-bin/welcome.pl?page=itinerary", 
-		"TargetFrame=body", 
-		"Resource=0", 
-		"RecContentType=text/html", 
-		"Referer=http://localhost:1080/cgi-bin/nav.pl?page=menu&in=home", 
-		"Snapshot=t3.inf", 
-		"Mode=HTML", 
-		LAST);
-
-	lr_end_transaction("goto_itinerary",LR_AUTO);
-
-	lr_think_time(9);
+	goto_itinerary();
+	
+	lr_think_time(5);
 
 	log_out();
 	

@@ -8,15 +8,17 @@ Action()
 	
 	open_site();
 
-	lr_think_time(37);
+	lr_think_time(5);
 
 	login();
 
-	lr_think_time(18);
+	lr_think_time(5);
 
 	lr_start_transaction("goto_itinerary");
 		
-	web_reg_find("Text/IC=<B>{FullName}",LAST);
+	web_reg_find("Text=Since user has already logged on",
+		LAST);
+
 	
 	web_reg_save_param_regexp(
 		"ParamName=f",
@@ -35,13 +37,14 @@ Action()
 		LAST);
 	
 	
+	
 	lr_end_transaction("goto_itinerary",LR_AUTO);
 
-	lr_think_time(35);
+	lr_think_time(5);
 
 	lr_start_transaction("delete_ticket");
 	
-	web_reg_find("Text=Error","Fail=Found",LAST);
+	web_reg_find("Text/IC={f}","Fail=Found", LAST);
 
 	web_submit_form("itinerary.pl", 
 		"Snapshot=t13.inf", 
@@ -53,26 +56,7 @@ Action()
 	
 	lr_end_transaction("delete_ticket",LR_AUTO);
 
-	lr_think_time(12);
-	
-	lr_start_transaction("goto_itinerary");
-		
-	web_url("Itinerary Button", 
-		"URL=http://localhost:1080/cgi-bin/welcome.pl?page=itinerary", 
-		"TargetFrame=body", 
-		"Resource=0", 
-		"RecContentType=text/html", 
-		"Referer=http://localhost:1080/cgi-bin/nav.pl?page=menu&in=home", 
-		"Snapshot=t8.inf", 
-		"Mode=HTML", 
-		LAST);
-	
-	web_reg_find("Text/IC={f}","Fail=Found", LAST);
-	
-	
-	lr_end_transaction("goto_itinerary",LR_AUTO);
-
-	log_out();
+	lr_think_time(5);
 
 	lr_end_transaction("UC02_DeleteTicket",LR_AUTO);
 
